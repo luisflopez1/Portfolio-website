@@ -3,72 +3,105 @@
 }
 
 body{
-	
+	height: 100%;
+	width: 100%;
 	margin: 0;
 		background-image: linear-gradient(#AED5D1,#5E918C,#ACD5D1,#397A9D);
+		background-repeat: no-repeat;
 }
 
-.main-background{
-	position: relative;
-	margin: 0 auto;
-	background-image: linear-gradient(#AED5D1,#5E918C,#ACD5D1,#397A9D);
-	height:364vh;
-	width: 1680px;
-
-}
 .blue-background{
 	position: absolute;
 	background-image: linear-gradient(rgba(36,48,131,.48),rgba(0,196,255,0));
 	top: 315px;
 	height: 1595px;
 	width: 100%;
-	z-index: 0;
+	z-index: 1;
 
 }
 
+.main-background{
+	position: absolute;
+	margin: 0 auto;
+	background-image: linear-gradient(#AED5D1,#5E918C,#ACD5D1,#397A9D);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 3217px;
+	width: 100%;
+	
 
+}
+
+.main{
+	max-width: 1680px;
+	position: relative;
+	margin: 0 auto;
+
+}
 
 .logo{
 	margin-left: 8%;
 	margin-top: 113px;
 	position: fixed;
+	z-index: 3;
 }
 
-.hero{
-	position: relative;
+ul, li{
+	display: inline-block;
+}
+
+.nav-wrapper{
+	position: absolute;
+	top: 300px;
+	left: 76%;
+}
+
+
+.nav{
+	position: fixed;
+	z-index: 3;
+}
+
+.computer-wrapper{
+	position: absolute;
+	top: 50px;
+	left: 36%;
 }
 
 .computer{
 	position: fixed;
-	top: 50px;
-	right: 22%;
-	height: 90vh;
+    max-width: 693px;
+	z-index: 1;
+}
+
+.phone-wrapper{
+	position: absolute;
+	top: 589px;
 }
 
 .phone{
 	position: fixed;
-	bottom: -30px;
-	height: 42vh;
+	max-width: 593px;
 	z-index: 0;
 
 }
 
-.work{
+.work{background-image: url(../images/computers.png);
+	border-radius: 50px;
 	position: relative;
-	top: 100vh;
+	top: 980px;
 	margin: 0 auto;
 	height: 862px;
 	width: 95%;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;background-position: center;
 	z-index: 2;
-}
-
-.title{
-	position: absolute;
-	left: 350px;
 }
 
 .work img{
 	width: 100%;
 	z-index: 2;
 }
+
+
+
+

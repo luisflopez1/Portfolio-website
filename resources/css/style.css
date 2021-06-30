@@ -1,40 +1,64 @@
 *{
 	color: white;
+	font-family: 'helvetica';
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
 }
 
 body{
-	height: 100%;
+	height: 300vh;
 	width: 100%;
 	margin: 0;
-		background-image: linear-gradient(#AED5D1,#5E918C,#ACD5D1,#397A9D);
-		background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(157,201,222,1),rgba(57,132,124,1),rgba(172,213,209,1),rgba(125,218,209,1));
+    background-repeat: no-repeat;
+}
+
+.title{
+	display: none;
+
 }
 
 .blue-background{
-	display: none;
 	position: absolute;
 	background-image: linear-gradient(rgba(36,48,131,.48),rgba(0,196,255,0));
 	top: 315px;
 	height: 1595px;
 	width: 100%;
-	z-index: 1;
+	z-index: 0;
+    box-shadow: 0 0 8px 15px rgba(36 48 131 / 48%);
+
 
 }
 
 .main-background{
-	position: absolute;
+	position: fixed;
+	top: 0;
 	margin: 0 auto;
-	background-image: linear-gradient(#AED5D1,#5E918C,#ACD5D1,#397A9D);
+	background-image: linear-gradient(rgba(157,201,222,1),rgba(157,201,222,1),rgba(57,132,124,1),rgba(125,218,209,1));
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 3217px;
+	height: 100vh;
 	width: 100%;
+	z-index: -2;
 	
+
+}
+.bottom-background{
+	
+	background-image: linear-gradient(rgba(0,196,255,0),rgba(36,48,131,.48));
+	top: 150vh;
+	right: 0;
+	position: absolute;
+	height: 150vh;
+	width: 56%;
+	z-index: -1;
 
 }
 
 .main{
-	max-width: 1680px;
 	position: relative;
 	margin: 0 auto;
 
@@ -45,10 +69,32 @@ body{
 	margin-top: 113px;
 	position: fixed;
 	z-index: 3;
+	animation: spin 1s ease-in-out;
+}
+
+.logo:hover{
+	animation: spinTwo 2s ease-in-out;
+}
+
+@keyframes spin{
+  0%{transform: scaleX(1.0);}
+  50%{transform: scaleX(-1.0);}
+  100%{transform: scaleX(1.0);}
+}
+
+@keyframes spinTwo{
+  0%{transform: scaleX(1.0);}
+  50%{transform: scaleX(-1.0);}
+  100%{transform: scaleX(1.0);}
 }
 
 ul, li{
+	font-size: 28px;
 	display: inline-block;
+}
+
+li{
+	margin-right: 20px;
 }
 
 .nav-wrapper{
@@ -60,12 +106,12 @@ ul, li{
 
 .nav{
 	position: fixed;
-	z-index: 3;
+	z-index: 1;
 }
 
 .computer-wrapper{
 	position: absolute;
-	top: 50px;
+	top: 30px;
 	left: 36%;
 }
 
@@ -82,64 +128,78 @@ ul, li{
 	position: fixed;
 	z-index: 2;
 	width: 450px;
-	margin: 100px 0 0 125px;
+	margin: 275px 0 0 355px;
 	font-size: 55px;
 	height: 380px;
 	overflow: scroll;
 }
 
-path {
-  fill: transparent;
-}
-
-text {
-  fill: #FF9800;
-}
-
-
-
-
-
 
 .computer{
 	position: fixed;
-    max-width: 693px;
+   width: 950px;
 	z-index: 1;
 }
 
 .phone-wrapper{
 	position: absolute;
-	top: 589px;
+	top: 60vh;
+	left: 8%;
 }
 
 .phone{
 	position: fixed;
-	max-width: 593px;
-	z-index: 0;
+	width: 20%;
+	z-index: -1;
 
 }
 
 .cable-wrapper{
 	position: absolute;
-	top: 600px;
-	right: 405px;
+	top: 855px;
+	right: 580px;
 }
 
 .cable{
 	position: fixed;
-	max-width: 593px;
+	max-width: 790px;
 	z-index: 0;
+	padding: 875px 0 0 850px;
 
+}
+
+.profile{
+	display: none;
+	position: fixed;
+    width: 10%;
+	z-index: 1;
+	left: 18%;
+	top: 243px;
+	animation: fadeIn 1s;
+	transition: transform 2s;
+	z-index: 2;
+}
+
+.profile:hover{
+	transform: scale(1.5);
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;
+      transform:scale(0);}
+  100% {opacity:1;
+      transform:scale(1);}
 }
 
 .work{background-image: url(../images/computers.png);
 	border-radius: 50px;
 	position: relative;
-	top: 980px;
+	top: 100vh;
 	margin: 0 auto;
-	height: 862px;
+	height: 95vh;
 	width: 95%;
-	background-repeat: no-repeat;background-position: center;
+	background-repeat: no-repeat;
+	background-position: center;
 	z-index: 2;
 	background-size: cover;
 }
@@ -149,6 +209,52 @@ text {
 	z-index: 2;
 }
 
+.work h2 {
+    padding: 136px 0 0 433px;
+    font-size: 87px;
+    margin: 0;
+}
+
+.screen{
+	opacity: .85;
+    margin: 100px 0 0 433px;
+ 	width: 800px;
+	height: 400px;
+	background-image: url(../images/whitenoise.png) ;
+}
+
+.info{
+	margin-top: 50px;
+	margin-left: 433px;
+	width: 800px;
+	height: 200px;
+	background-color: rgba(0, 0, 0, .25);
+	    padding: 29px;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+}
+
+.folders{
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	width: 400px;
+	justify-content: space-between;
+	top: 336px;
+	right: 175px;
+
+}
+
+.folder{
+	position: relative;
+	width: 100px;
+	height: 75px;
+	background-image: url(../images/folder.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-bottom: 50px;
+	margin-left: 1px;
+}
 
 
 

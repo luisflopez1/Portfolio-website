@@ -3,9 +3,14 @@ let text = document.getElementById('main-text')
 let bio = document.getElementById('bio')
 let profile = document.getElementById('profile')
 let screen = document.getElementById('screen')
+
+//folders
 let paintings = document.getElementById('paintings')
 let editing = document.getElementById('editing')
 let brand = document.getElementById('brand')
+let silmar = document.getElementById('silmar')
+
+
 let info = document.getElementById('info')
 
 
@@ -94,6 +99,24 @@ brand.onmouseout = function(){
   info.innerHTML = "Locating  file . . . "
 };
 
+//silmar folder
+
+silmar.onmouseover = function(){
+  screen.style.backgroundImage = " url(./resources/images/silmar.gif)";
+  screen.style.opacity = "1";
+  screen.style.backgroundSize = "contain";
+  screen.style.backgroundColor = "rgba(255, 255, 255, .10)";
+  screen.style.backgroundPosition = "center";
+  screen.style.backdropFilter = "blur(8px)"
+  info.innerHTML = "File found: Silmar Painting LLC"
+};
+
+silmar.onmouseout = function(){
+  screen.style.backgroundImage = "";
+  screen.style.opacity = "";
+  screen.style.backgroundSize = "";
+  info.innerHTML = "Locating  file . . . "
+};
 
 window.onscroll = function(ev) {
     if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {

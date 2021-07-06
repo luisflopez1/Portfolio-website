@@ -17,7 +17,7 @@ body{
 }
 
 h1{
-	font-size: 80px;
+	font-size: 65px;
 }
 
 h2{
@@ -31,7 +31,7 @@ h3{
 .title{
     position: absolute;
     top: 313px;
-    left: 286px;
+    left: 12%;
 }
 
 .blue-background{
@@ -117,7 +117,7 @@ li:hover{
 .nav-wrapper{
 	position: absolute;
 	top: 460px;
-	left: 76%;
+	left: 80%;
 }
 
 
@@ -130,14 +130,14 @@ li:hover{
 .computer-wrapper{
 	position: absolute;
 	top: 85px;
-	left: 36%;
+	left: 40%;
 }
 
 .computer-wrapper h1{
 	position: fixed;
 	z-index: 2;
 	width: 400px;
-	padding: 130px 0 0 219px;
+	padding: 200px 0 0 135px;
   text-shadow: 0 0 8px #ffe7b1,
                0 0 21px #ffbf6f;
   animation: flicker 3s infinite;
@@ -176,7 +176,7 @@ li:hover{
 .phone-wrapper{
 	position: absolute;
 	top: 60vh;
-	left: 8%;
+	left: 12%;
 }
 
 .phone{
@@ -329,21 +329,18 @@ li:hover{
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	border: 1px solid red;
 }
 
 .portfolio{
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	border: 1px solid red;
 }
 
 .bottom{
 	position: relative;
 	height: 100vh;
 	width: 100%;
-	border: 1px solid red;
 }
 
 footer{
